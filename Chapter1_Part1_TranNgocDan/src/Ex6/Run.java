@@ -35,7 +35,7 @@ public class Run {
                 Employee person = new Employee(name, coeff, num, bonus);
                 System.out.println("Revenue: " + String.format("%.2f",person.calRevenue()));
                 System.out.println("Tax Revenue: " + String.format("%.2f",person.calTaxRevenue()));
-                System.out.println("Personal tax Revenue: " + String.format("%.2f",person.calPersonalTaxRevenue()));
+                System.out.println("Personal tax Revenue: " + String.format("%.2f",person.calPersonalRevenueTax()));
                 System.out.println("Real Revenue: " + String.format("%.2f",person.calrealRevenue()));
 
                 //ask for continution

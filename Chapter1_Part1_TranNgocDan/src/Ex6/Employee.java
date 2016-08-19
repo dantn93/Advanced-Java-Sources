@@ -40,8 +40,13 @@ public class Employee {
         }
     }
 
+    public int getSub_num() {
+        return sub_num;
+    }
+
+    
     //Calculate personal tax revenue
-    public double calPersonalTaxRevenue() {
+    public double calPersonalRevenueTax() {
         double taxRevenue = calTaxRevenue();
         //LEVEL1
         if (taxRevenue >= TaxInfo.LEVEL1.getMinRevenue() && taxRevenue < TaxInfo.LEVEL1.getMaxRevenue()) {
@@ -91,7 +96,7 @@ public class Employee {
     
     
     public double calrealRevenue(){
-        return calRevenue() - calPersonalTaxRevenue();
+        return calRevenue() - calPersonalRevenueTax();
     }
     
 }

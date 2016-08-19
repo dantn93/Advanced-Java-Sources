@@ -20,6 +20,10 @@ public class Circle implements ICalculate{
         this.center = center;
     }
 
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
     public void setRadius(Point p) {
         Distance d = new Distance(this.center,p);
         this.radius = d.calDistance();
