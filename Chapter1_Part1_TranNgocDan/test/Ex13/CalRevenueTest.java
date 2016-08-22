@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ex6;
+package Ex13;
 
+import Ex6.*;
 import static java.lang.Math.pow;
 import org.junit.After;
 import org.junit.AfterClass;
