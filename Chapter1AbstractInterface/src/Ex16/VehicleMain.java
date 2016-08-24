@@ -1,3 +1,6 @@
+/**
+ * This code manages vehicle
+ */
 package Ex16;
 
 import java.io.BufferedReader;

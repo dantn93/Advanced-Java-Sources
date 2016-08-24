@@ -1,3 +1,6 @@
+/**
+ * This code manages fights
+ */
 package Ex8;
 
 import java.io.BufferedReader;

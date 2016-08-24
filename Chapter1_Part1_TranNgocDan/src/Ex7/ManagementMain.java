@@ -1,3 +1,6 @@
+/**
+ * This code manages CD collection
+ */
 package Ex7;
 
 import java.io.BufferedReader;

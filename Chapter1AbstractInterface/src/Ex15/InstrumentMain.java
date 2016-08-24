@@ -1,3 +1,6 @@
+/**
+ * This code guides how to play instruments
+ */
 package Ex15;
 
 import Ex14.Circle;

@@ -1,3 +1,6 @@
+/**
+ * This code manages staff in a company
+ */
 package Ex6;
 
 import java.io.BufferedReader;

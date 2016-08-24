@@ -1,3 +1,6 @@
+/**
+ * This code manages animals in a zoo
+ */
 package Ex17;
 
 import Ex16.VehicleCollection;

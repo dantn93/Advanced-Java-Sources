@@ -1,3 +1,6 @@
+/**
+ * This code calculate perimeter & area of circle, rectangle, square
+ */
 package Ex14;
 
 import java.io.BufferedReader;

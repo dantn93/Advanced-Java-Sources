@@ -1,3 +1,6 @@
+/**
+ * This code manages computers in a store
+ */
 package Ex9;
 
 import java.io.BufferedReader;
