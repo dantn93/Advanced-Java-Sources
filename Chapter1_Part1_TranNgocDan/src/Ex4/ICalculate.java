@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Ex4;
 
+package Ex4;
 /**
- *
  * @author Tran Ngoc Dan
+ * @version: 1.0
+ * @day: 22/08/2016
  */
 public interface ICalculate {
     public double calPerimeter();

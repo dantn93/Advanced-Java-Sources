@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ex5;
 import Ex3.*;
 import Ex4.ICalculate;
-
 /**
- *
  * @author Tran Ngoc Dan
+ * @version: 1.0
+ * @day: 22/08/2016
  */
 public class Rectangle implements ICalculate {
     private Point A;

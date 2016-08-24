@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ex14;
 
 /**
@@ -25,10 +20,12 @@ public class Circle extends Shape {
         return r;
     }
 
+    //Calculate perimeter
     public double perimeter() {
         return 2 * Math.PI * r;
     }
 
+    //Calculate area
     public double area() {
         return Math.PI * Math.pow(r, 2);
     }

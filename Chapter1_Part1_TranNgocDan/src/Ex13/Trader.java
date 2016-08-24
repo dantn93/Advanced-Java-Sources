@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ex13;
 
 /**
@@ -20,12 +15,14 @@ public class Trader extends Employee {
         this.businessWage = businessWage;
         this.businessWageRate = businessWageRate;
     }
-
+    
+    //Calculate poundage
     @Override
     public double calPoundage() {
         return this.businessWage * this.businessWageRate;
     }
     
+    //Show information
     public void showInfo(){
         System.out.println("\tName: "+this.name);
         System.out.println("\tCoefficient of Salary: "+this.coefficient);

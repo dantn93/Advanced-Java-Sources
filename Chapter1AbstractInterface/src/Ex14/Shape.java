@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ex14;
 /**
  * @author: Tran Ngoc Dan
@@ -15,6 +10,7 @@ public abstract class Shape {
 
     public abstract double area();
 
+    //Show information
     public void showInfo() {
         System.out.println("Perimeter: " + this.perimeter());
         System.out.println("Area: " + this.area());

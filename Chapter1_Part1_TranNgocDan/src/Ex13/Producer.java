@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ex13;
 
 import Ex6.TaxInfo;
@@ -28,7 +23,7 @@ public class Producer extends Employee {
     public double calPoundage() {
         return (this.quantity - Producer.normsQuantity) * Producer.bonusRate;
     }
-    
+    //Show information
     public void showInfo(){
         System.out.println("\tName: "+this.name);
         System.out.println("\tCoefficient of Salary: "+this.coefficient);

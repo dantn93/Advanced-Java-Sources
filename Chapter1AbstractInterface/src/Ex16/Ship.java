@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ex16;
 
 /**
@@ -25,6 +20,7 @@ public class Ship extends Vehicle implements ISpeedUnderWater, IFuelConsumption 
         this.fuelType = fuelType;
     }
 
+    //Calculate speed of Ship
     @Override
     public void calSpeed(double distance, double time, double vWater) {
         if (trend.equalsIgnoreCase("down")) {
@@ -35,6 +31,7 @@ public class Ship extends Vehicle implements ISpeedUnderWater, IFuelConsumption 
         }
     }
     
+    //fuel consumption for
     @Override
     public void calFuelConsumption(double distance, double spendingFuel, double wasteOfFuel) {
         if (spendingFuel - wasteOfFuel > 0) {

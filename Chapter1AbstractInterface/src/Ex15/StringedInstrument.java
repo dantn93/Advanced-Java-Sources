@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ex15;
 
 /**
@@ -28,6 +23,7 @@ public class StringedInstrument extends Instrument {
         System.out.println("Play " + this.name + " " + this.numOfString+" string");
     }
 
+    //Show information
     @Override
     public void showInfo() {
         System.out.println("== SHOW INFORMATION == ");

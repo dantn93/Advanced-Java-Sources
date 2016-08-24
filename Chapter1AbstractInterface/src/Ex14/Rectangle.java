@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ex14;
 
 /**
@@ -20,11 +15,13 @@ public class Rectangle extends Shape {
         this.width = width;
     }
 
+    //calculate perimeter
     @Override
     public double perimeter() {
         return (this.height + this.width) * 2;
     }
 
+    //calculate area
     @Override
     public double area() {
         return this.height * this.width;

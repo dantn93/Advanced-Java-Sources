@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ex16;
 
 import java.util.ArrayList;
@@ -22,14 +17,17 @@ public class VehicleCollection {
         this.shipCll = new ArrayList<Ship>();
     }
 
+    //Add a car into collection
     public void addCar(Car car) {
         carCll.add(car);
     }
 
+    //add a ship into collection
     public void addShip(Ship ship) {
         shipCll.add(ship);
     }
-
+    
+    //Show information
     public void showInfo() {
         System.out.println("\n\n== SHOW INFORMATION ==");
         if (carCll.size() > 0) {
