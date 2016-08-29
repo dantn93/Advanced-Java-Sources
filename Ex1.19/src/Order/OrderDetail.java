@@ -2,7 +2,7 @@
 package Order;
 
 /**
- * 
+ *
  * @author Tran Ngoc Dan
  * @version 1.0
  * @date 29/08/2016
@@ -24,6 +24,11 @@ public class OrderDetail {
     //calculate total amount in a product category
     public double getTotalAmount() {
         return this.quantity * this.detail.getPrice();
+    }
+
+    public void showInfo() {
+        this.detail.showInfo();
+        System.out.println("\n\t[Quantity]: " + this.quantity);
     }
 
 }

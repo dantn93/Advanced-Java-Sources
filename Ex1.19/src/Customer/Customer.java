@@ -42,7 +42,7 @@ public class Customer {
         this.atmCard.add(crd);
     }
     
-    //When customer buy something which is the same as he/she place an order
+    //customer buy something which is the same as placing an order
     public void addOrder(Order ord){
         this.order.add(ord);
     }
@@ -57,9 +57,6 @@ public class Customer {
         this.order.get(0).setStatus(status);
     }
 
-    public Information getInfo() {
-        return info;
-    }
 
     public ArrayList<CreditCard> getCreditCard() {
         return this.creditCard;
@@ -71,5 +68,10 @@ public class Customer {
     public String getStatus(){
         return this.order.get(0).getStatus();
     }
-    
+
+    public ArrayList<Order> getOrder() {
+        return order;
+    }
+
+
 }

@@ -8,7 +8,7 @@ package Order;
 import java.util.ArrayList;
 
 /**
- * 
+ *
  * @author Tran Ngoc Dan
  * @version 1.0
  * @date 29/08/2016
@@ -45,13 +45,26 @@ public class Order {
             return sum;
         }
     }
-    public void setPrintOrder(boolean print){
+
+    public void setPrintOrder(boolean print) {
         this.printOrder = print;
     }
-    public void setStatus(String status){
+
+    public void setStatus(String status) {
         this.status = status;
     }
-    public String getStatus(){
+
+    public String getStatus() {
         return this.status;
+    }
+
+    public void showInfo() {
+        System.out.println("== SHOW INFORMATION ==");
+        for (int i = 0; i < this.order.size(); i++) {
+            System.out.print("- ");
+            this.order.get(i).showInfo();
+            System.out.println("");
+        }
+
     }
 }

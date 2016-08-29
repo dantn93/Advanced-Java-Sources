@@ -24,10 +24,8 @@ public class ATM extends Card {
     public int subBalances(double sub) {
         if (sub <= this.balances) {
             this.balances -= sub;
-            System.out.println("Pay successfully");
             return 1;
         } else {
-            System.out.println("Can't pay");
             return 0;
         }
     }

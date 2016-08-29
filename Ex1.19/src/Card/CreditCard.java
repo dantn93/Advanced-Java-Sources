@@ -43,10 +43,8 @@ public class CreditCard extends Card {
     public int debit(double sub) {
         if ((this.debt + sub) <= maxDebt) {
             this.debt += sub;
-            System.out.println("Pay successfully");
             return 1;
         } else {
-            System.out.println("Can't pay");
             return 0;
         }
     }

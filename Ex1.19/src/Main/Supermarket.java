@@ -135,19 +135,27 @@ public class Supermarket {
                 }
             }
 
+            //Afterthat, I will show all information of your order
+            customer.getOrder().get(0).showInfo();
+            //Show information about payment
             if (ans == 1) {
-
-                if (customer.getAtmCard().get(0).subBalances(totalAmount) == 0
-                        || customer.getCreditCard().get(0).debit(totalAmount) == 0) {
-                    customer.setOrderStatus("You haven't yet paid");
+                if (customer.getAtmCard().get(0).subBalances(totalAmount) == 0) {
+                    if (customer.getCreditCard().get(0).debit(totalAmount) == 0) {
+                        customer.setOrderStatus("You haven't yet paid");
+                    } else {
+                        customer.setOrderStatus("You have already paid");
+                    }
                 } else {
                     customer.setOrderStatus("You have already paid");
                 }
             }
             if (ans == 2) {
-                if (customer.getCreditCard().get(0).debit(totalAmount) == 0
-                        || customer.getAtmCard().get(0).subBalances(totalAmount) == 0) {
-                    customer.setOrderStatus("You haven't yet paid");
+                if (customer.getCreditCard().get(0).debit(totalAmount) == 0) {
+                    if (customer.getAtmCard().get(0).subBalances(totalAmount) == 0) {
+                        customer.setOrderStatus("You haven't yet paid");
+                    } else {
+                        customer.setOrderStatus("You have already paid");
+                    }
                 } else {
                     customer.setOrderStatus("You have already paid");
                 }

@@ -24,4 +24,9 @@ public class ProductInfo {
     public double getPrice() {
         return price;
     }
+    
+    public void showInfo(){
+        System.out.print("[Name]: "+this.name);
+        System.out.print("\n\t[Price]: "+this.price);
+    }
 }
