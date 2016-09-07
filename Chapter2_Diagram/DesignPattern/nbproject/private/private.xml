@@ -3,19 +3,35 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31b/AodaiDepartment.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31a/DressMain.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31a/ModelFactory.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31a/Model.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex30/mainFactory.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31a/Aodai.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31b/TraditionalDepartment.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31a/CheongsamClothes.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31a/EnumModel.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31b/Company.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31b/CheongsamDepartment.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex30/Circle.java</file>
-            <file>file:/C:/Users/snow/Documents/NetBeansProjects/DesignPattern/src/Ex31b/DressMain31b.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex27/Shape.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex32/Booker.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex32/BookingMain.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Observer/ObserverPatternDemo.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex27/DrawShape.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Observer/Subject.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex32/TrainBooker.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Observer/BinaryObserver.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Observer/Observer.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex27/Circle.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex28/MobiObserver.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex33/ProxyImage.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Observer/HexaObserver.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex33/ProxyPatternDemo.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex27/Rectangle.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex33/RealImage.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex30/mainFactory.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex32/BookingFacade.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex27/RedShapeDecorator.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex29/ShareDocumentMain.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex33/Image.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex28/ObserverMain.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex32/FlightBooker.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex28/Account.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex27/ShapeDecorator.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Observer/OctalObserver.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex32/HoteltBooker.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex28/Observer.java</file>
+            <file>file:/F:/GCS/Advance%20JAVA/Advanced-Java-Sources/Chapter2_Diagram/DesignPattern/src/Ex28/EmailObserver.java</file>
         </group>
     </open-files>
 </project-private>
