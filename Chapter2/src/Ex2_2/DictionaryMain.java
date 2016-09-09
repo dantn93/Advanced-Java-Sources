@@ -14,8 +14,9 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- *
- * @author snow
+ * @author Tran Ngoc Dan
+ * @version 1.0
+ * @since 08/09/2016
  */
 public class DictionaryMain {
 

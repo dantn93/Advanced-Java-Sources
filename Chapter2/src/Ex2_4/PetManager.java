@@ -9,8 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author snow
+ * @author Tran Ngoc Dan
+ * @version 1.0
+ * @since 08/09/2016
  */
 public class PetManager<T> {
 

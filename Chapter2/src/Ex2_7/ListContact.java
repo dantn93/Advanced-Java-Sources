@@ -6,8 +6,9 @@
 package Ex2_7;
 
 /**
- *
- * @author snow
+ * @author Tran Ngoc Dan
+ * @version 1.0
+ * @since 08/09/2016
  */
 public enum ListContact {
     Person1("01675 217 654","Hoang"),

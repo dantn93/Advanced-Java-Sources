@@ -9,8 +9,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- *
- * @author snow
+ * @author Tran Ngoc Dan
+ * @version 1.0
+ * @since 08/09/2016
  */
 public class PetMain {
 

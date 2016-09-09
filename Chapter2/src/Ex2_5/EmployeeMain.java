@@ -10,8 +10,9 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 
 /**
- *
- * @author snow
+ * @author Tran Ngoc Dan
+ * @version 1.0
+ * @since 08/09/2016
  */
 public class EmployeeMain {
 

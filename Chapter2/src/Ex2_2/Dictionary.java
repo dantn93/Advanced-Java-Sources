@@ -8,8 +8,9 @@ package Ex2_2;
 import java.util.TreeMap;
 
 /**
- *
- * @author snow
+ * @author Tran Ngoc Dan
+ * @version 1.0
+ * @since 08/09/2016
  */
 public class Dictionary {
 

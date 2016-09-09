@@ -6,8 +6,9 @@
 package Ex2_1;
 
 /**
- *
- * @author snow
+ * @author Tran Ngoc Dan
+ * @version 1.0
+ * @since 08/09/2016
  */
 public class CD implements Comparable<CD>{
     private String ID;
