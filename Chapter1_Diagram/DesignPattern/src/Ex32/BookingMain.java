@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 
 /**
  *
- * @author Tran Ngoc Dan date: 5/9/2016
+ * @author Tran Ngoc Dan 
+ * @date: 5/9/2016
  * @version : 1.0
  *
  */

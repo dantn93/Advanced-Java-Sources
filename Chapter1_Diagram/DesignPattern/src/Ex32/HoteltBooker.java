@@ -12,8 +12,4 @@ public class HoteltBooker implements Booker{
 	public String getInformation(String date, String hour, String place) {
 		return "date: " + date + ", hour: " + hour + ", place: " + place + " have hotel: A, B and C";
 	}
-
-	public HoteltBooker() {
-		super();
-	}
 }
