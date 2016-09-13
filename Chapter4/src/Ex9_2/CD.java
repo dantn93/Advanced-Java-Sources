@@ -30,7 +30,7 @@ public class CD implements Comparable<CD>{
     }
     
     
-    
+    //Get information
     public void showInfo(){
         System.out.println("ID: "+this.ID);
         System.out.println("Name: "+this.name);

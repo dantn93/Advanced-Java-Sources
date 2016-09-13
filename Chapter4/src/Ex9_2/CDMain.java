@@ -48,7 +48,7 @@ public class CDMain {
                     }
                 }
                 switch (ans) {
-                    case 1:
+                    case 1://add CD
                         System.out.println("== Fill out CD's information ==");
                         System.out.print(message.getString("id"));
                         String id = input.readLine();
@@ -76,7 +76,7 @@ public class CDMain {
                         }
                         list.add(new CD(id, name, singer, numberOfSongs, price));
                         break;
-                    case 2:
+                    case 2://shows list of CDs
                         System.out.println("== "+message.getString("list")+" ==");
                         double sumPrice = 0;
                         for (int i = 0; i < list.size(); i++) {
@@ -86,11 +86,11 @@ public class CDMain {
                         }
                         System.out.println(message.getString("sumprice") + sumPrice);
                         break;
-                    case 3:
+                    case 3://sort the list
                         Collections.sort(list);
                         break;
                 }
-                if (ans == 4) {
+                if (ans == 4) {//exit
                     break;
                 }
             }
