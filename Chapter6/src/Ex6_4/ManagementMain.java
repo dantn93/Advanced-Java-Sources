@@ -3,10 +3,7 @@
  */
 package Ex6_4;
 
-import Ex6_3.Student;
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,25 +12,24 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import static java.lang.System.in;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author Tran Ngoc Dan
  * @version: 1.0
- * @day: 22/08/2016
+ * @day: 15/09/2016
  */
 public class ManagementMain {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) throws IOException {
-        // TODO code application logic here
+    static List<Employee> lst = new ArrayList<>();
+
+    public static void main(String[] args) throws IOException,
+            ClassNotFoundException {
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         try {
-            BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-            List<Employee> list = new ArrayList<>();
+            // setEmployee(); // add default employee to file
+            readInformation();
             while (true) {
                 System.out.println("1. Add an employee");
                 System.out.println("2. Load and show list of employee");
@@ -59,56 +55,82 @@ public class ManagementMain {
                     System.out.print("Mothly bonus: ");
                     double bonus = Double.parseDouble(input.readLine());
 
-                    Employee person = new Employee(name, coeff, num, bonus);
-                    ObjectOutputStream out;
-                    try {
-                        out = new ObjectOutputStream(new FileOutputStream("src\\Ex6_4\\employee.txt", true)) {
-                            @Override
-                            protected void writeStreamHeader() throws IOException {
-                                reset();
-                            }
-                        };
-                        out.writeObject(person);
-                        out.close();
-
-                    } catch (FileNotFoundException ex) {
-                    } catch (IOException ex) {
-
-                    }
+                    Employee emp = new Employee(name, coeff, num, bonus);
+                    lst.add(emp);
+                    addEmployee();
                 }
 
                 //load and show employee's info
                 if (ans == 2) {
-                    try (ObjectInputStream in = new ObjectInputStream(
-                            new BufferedInputStream(new FileInputStream("src\\Ex6_4\\employee.txt")))) {
-
-                        while (true) {
-                            Employee em = (Employee) in.readObject();
-                            list.add(em);
-                        }
-                    } catch (ClassNotFoundException | IOException ex) {
-                        //    JOptionPane.showMessageDialog(rootPane, ex.getMessage());
-                    }
-
-                    //show list of employee
-                    for (int i = 0; i < list.size(); i++) {
-                        list.get(i).showInfo();
+                    for (Object o : lst) {
+                        Employee emp = (Employee) o;
+                        emp.showInfo();
                     }
                 }
                 //search employee
                 if (ans == 3) {
-
+                    System.out.print("[Name]: ");
+                    String name = input.readLine();
+                    System.out.println("== Result ==");
+                    searchEmployee(name);
                 }
                 //quit
                 if (ans == 4) {
                     break;
                 }
             }
-
         } catch (Exception ex) {
-            System.out.println("Err: " + ex.getMessage());
-
+            System.out.println("Error: " + ex.getMessage());
         }
     }
 
+    // function add new employee
+    public static void addEmployee() {
+        ObjectOutputStream out;
+        try {
+            out = new ObjectOutputStream(new FileOutputStream("src/Ex6_4/employee.txt"));
+            out.reset();
+            for (Object o : lst) {
+                Employee e = (Employee) o;
+                out.writeObject(e);
+            }
+            System.out.println("completed !");
+            out.flush();
+
+            out.close();
+        } catch (IOException ex) {
+            System.out.println("Error: " + ex.getMessage());
+        }
+    }
+
+    // function read information of employee
+    public static void readInformation() throws FileNotFoundException,
+            IOException, ClassNotFoundException {
+        ObjectInputStream in = null;
+        FileInputStream file = new FileInputStream("src\\Ex6_4\\employee.txt");
+        if (file.available() != 0) {
+            try {
+                in = new ObjectInputStream(file);
+                while (true) {
+                    lst.add((Employee) in.readObject());
+                }
+            } catch (EOFException e) {
+                in.close();
+            }
+        }
+    }
+
+    //Search an employee
+    public static void searchEmployee(String name) {
+        int count = 0;
+        for (int i = 0; i < lst.size(); i++) {
+            if (lst.get(i).getName().equalsIgnoreCase(name)) {
+                lst.get(i).showInfo();
+            } else {
+                count++;
+            }
+        }
+        if(count == lst.size())
+            System.out.println("Don't have that employee");
+    }
 }

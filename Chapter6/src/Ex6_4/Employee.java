@@ -1,11 +1,12 @@
 package Ex6_4;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 
 /**
  * @author Tran Ngoc Dan
  * @version: 1.0
- * @day: 22/08/2016
+ * @day: 15/09/2016
  */
 public class Employee implements Serializable {
 
@@ -14,6 +15,8 @@ public class Employee implements Serializable {
     private int sub_num;//number of people which subtracted depend on circumstances
     private double bonus;//weekly bonus
     private double baseSalary;
+    final double DEFAULT_SALARY_1 = 9000000;
+    final double DEFAULT_SALARY_2 = 3600000;
 
     public Employee(String name, double coefSalary, int sub_num, double bonus) {
         this.name = name;
@@ -23,83 +26,76 @@ public class Employee implements Serializable {
         this.baseSalary = 1260000;
     }
 
-    //Calculate full revenue
-    public double calRevenue() {
-        return this.coefSalary * baseSalary + bonus;
+    public String getName() {
+        return name;
     }
 
-    //Calculate revenue which has tax
-    public double calTaxRevenue() {
-        double taxRevenue = calRevenue() - 9000000 - this.sub_num * 3600000;
-        if (taxRevenue > 0) {
-            return taxRevenue;
-        } else {
-            return 0;
-        }
+    public double getCoefSalary() {
+        return coefSalary;
     }
 
     public int getSub_num() {
         return sub_num;
     }
 
-    //Calculate personal tax revenue
-    public double calPersonalRevenueTax() {
-        double taxRevenue = calTaxRevenue();
-        //LEVEL1
-        if (taxRevenue >= TaxInfo.LEVEL1.getMinRevenue() && taxRevenue < TaxInfo.LEVEL1.getMaxRevenue()) {
-            return taxRevenue * TaxInfo.LEVEL1.getTax();
-        }
-        //LEVEL2
-        if (taxRevenue >= TaxInfo.LEVEL2.getMinRevenue() && taxRevenue < TaxInfo.LEVEL2.getMaxRevenue()) {
-            return (taxRevenue - TaxInfo.LEVEL1.getMaxRevenue()) * TaxInfo.LEVEL2.getTax() + TaxInfo.LEVEL1.getMaxTaxMoney();
-        }
-
-        //LEVEL3
-        if (taxRevenue >= TaxInfo.LEVEL3.getMinRevenue() && taxRevenue < TaxInfo.LEVEL3.getMaxRevenue()) {
-            return (taxRevenue - TaxInfo.LEVEL2.getMaxRevenue()) * TaxInfo.LEVEL3.getTax()
-                    + TaxInfo.LEVEL2.getMaxTaxMoney() + TaxInfo.LEVEL1.getMaxTaxMoney();
-        }
-
-        //LEVEL4
-        if (taxRevenue >= TaxInfo.LEVEL4.getMinRevenue() && taxRevenue < TaxInfo.LEVEL4.getMaxRevenue()) {
-            return (taxRevenue - TaxInfo.LEVEL3.getMaxRevenue()) * TaxInfo.LEVEL4.getTax()
-                    + TaxInfo.LEVEL3.getMaxTaxMoney() + TaxInfo.LEVEL2.getMaxTaxMoney() + TaxInfo.LEVEL1.getMaxTaxMoney();
-        }
-
-        //LEVEL5
-        if (taxRevenue >= TaxInfo.LEVEL5.getMinRevenue() && taxRevenue < TaxInfo.LEVEL5.getMaxRevenue()) {
-            return (taxRevenue - TaxInfo.LEVEL4.getMaxRevenue()) * TaxInfo.LEVEL5.getTax()
-                    + TaxInfo.LEVEL4.getMaxTaxMoney() + TaxInfo.LEVEL3.getMaxTaxMoney()
-                    + TaxInfo.LEVEL2.getMaxTaxMoney() + TaxInfo.LEVEL1.getMaxTaxMoney();
-        }
-
-        //LEVEL6
-        if (taxRevenue >= TaxInfo.LEVEL6.getMinRevenue() && taxRevenue < TaxInfo.LEVEL6.getMaxRevenue()) {
-            return (taxRevenue - TaxInfo.LEVEL5.getMaxRevenue()) * TaxInfo.LEVEL6.getTax()
-                    + TaxInfo.LEVEL5.getMaxTaxMoney()
-                    + TaxInfo.LEVEL4.getMaxTaxMoney() + TaxInfo.LEVEL3.getMaxTaxMoney()
-                    + TaxInfo.LEVEL2.getMaxTaxMoney() + TaxInfo.LEVEL1.getMaxTaxMoney();
-        }
-
-        //LEVEL7
-        if (taxRevenue >= TaxInfo.LEVEL7.getMinRevenue() && taxRevenue < TaxInfo.LEVEL7.getMaxRevenue()) {
-            return (taxRevenue - TaxInfo.LEVEL6.getMaxRevenue()) * TaxInfo.LEVEL7.getTax()
-                    + TaxInfo.LEVEL6.getMaxTaxMoney() + TaxInfo.LEVEL5.getMaxTaxMoney()
-                    + TaxInfo.LEVEL4.getMaxTaxMoney() + TaxInfo.LEVEL3.getMaxTaxMoney()
-                    + TaxInfo.LEVEL2.getMaxTaxMoney() + TaxInfo.LEVEL1.getMaxTaxMoney();
-        }
-        return 0;
+    public double getBonus() {
+        return bonus;
     }
 
-    public double calrealRevenue() {
-        double realRevenue = calRevenue() - calPersonalRevenueTax();
-        if (realRevenue > 0) {
-            return realRevenue;
+    //Calculate full revenue
+    public double calRevenue() {
+
+        double salary = this.coefSalary * baseSalary + this.bonus;
+        if (salary > 0) {
+            return salary;
         } else {
             return 0;
         }
     }
 
+    //Calculate personal tax revenue
+    public double calTaxRevenue() {
+        double salaryTax = this.calRevenue() - DEFAULT_SALARY_1 - this.getSub_num() * DEFAULT_SALARY_2;
+        if (salaryTax > 0) {
+            return salaryTax;
+        } else {
+            return 0;
+        }
+    }
+
+    //Calculate personal revenue tax
+    public double calPersonalRevenueTax() {
+        double result = 0;
+        double taxRevenue = this.calTaxRevenue();
+        if (taxRevenue < TaxInfo.LEVEL1.getMaxRevenue()) {
+            result = TaxInfo.LEVEL1.calPersonalRevenueTax(taxRevenue);
+        } else if (taxRevenue < TaxInfo.LEVEL2.getMaxRevenue()) {
+            result = TaxInfo.LEVEL2.calPersonalRevenueTax(taxRevenue);
+        } else if (taxRevenue < TaxInfo.LEVEL3.getMaxRevenue()) {
+            result = TaxInfo.LEVEL3.calPersonalRevenueTax(taxRevenue);
+        } else if (taxRevenue < TaxInfo.LEVEL4.getMaxRevenue()) {
+            result = TaxInfo.LEVEL4.calPersonalRevenueTax(taxRevenue);
+        } else if (taxRevenue < TaxInfo.LEVEL5.getMaxRevenue()) {
+            result = TaxInfo.LEVEL5.calPersonalRevenueTax(taxRevenue);
+        } else if (taxRevenue < TaxInfo.LEVEL6.getMaxRevenue()) {
+            result = TaxInfo.LEVEL6.calPersonalRevenueTax(taxRevenue);
+        } else {
+            result = TaxInfo.LEVEL7.calPersonalRevenueTax(taxRevenue);
+        }
+        return result;
+    }
+
+    //real revenue
+    public double calrealRevenue() {
+        double result = this.calRevenue() - this.calPersonalRevenueTax();
+        if (result > 0) {
+            return result;
+        } else {
+            return 0;
+        }
+    }
+
+    //show employee's information
     public void showInfo() {
         System.out.println("[Name]: " + this.name);
         System.out.println("[Coeficient Salary]: " + this.coefSalary);
