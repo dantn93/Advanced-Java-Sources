@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<contacts>
+    <contact>
+        <name>tien</name>
+        <phone>09090909</phone>
+    </contact>
+    <contact>
+        <name>hau</name>
+        <phone>090909091111</phone>
+    </contact>
+    <contact>
+        <name>tu</name>
+        <phone>123456789</phone>
+    </contact>
+    <contact>
+        <name>Mom</name>
+        <phone>456789</phone>
+    </contact>
+    <contact>
+        <name>Hoang</name>
+        <phone>01675 217 654</phone>
+    </contact>
+    <contact>
+        <name>Ha</name>
+        <phone>01675 908 534</phone>
+    </contact>
+    <contact>
+        <name>Hang</name>
+        <phone>0987678987</phone>
+    </contact>
+    <contact>
+        <name>Thuy</name>
+        <phone>0964578356</phone>
+    </contact>
+</contacts>

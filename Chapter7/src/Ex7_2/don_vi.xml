@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cong_ty>
+  <don_vi>
+    <id>1</id>
+    <ten>Phân xưởng sản xuất</ten>
+  </don_vi>
+  <don_vi>
+    <id>2</id>
+    <ten>Bộ phận kinh doanh</ten>
+  </don_vi>
+</cong_ty>

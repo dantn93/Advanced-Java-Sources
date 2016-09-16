@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<don_vi>
+  <nhan_vien>
+    <id>1</id>
+    <ho_ten>Phí Quyết Nguyên</ho_ten>
+    <gioi_tinh>1</gioi_tinh>
+    <ngay_sinh>1973-08-31</ngay_sinh>
+    <muc_luong>5200000.0</muc_luong>
+    <dia_chi>424 C Phường 4-Quận 10-Tỉnh/Tp CC</dia_chi>
+    <id_don_vi>1</id_don_vi>
+  </nhan_vien>
+  <nhan_vien>
+    <id>2</id>
+    <ho_ten>hoang</ho_ten>
+    <gioi_tinh>1</gioi_tinh>
+    <ngay_sinh>1</ngay_sinh>
+    <muc_luong>12.0</muc_luong>
+    <dia_chi>2</dia_chi>
+    <id_don_vi>1</id_don_vi>
+  </nhan_vien>
+  <nhan_vien>
+    <id>3</id>
+    <ho_ten>van</ho_ten>
+    <gioi_tinh>0</gioi_tinh>
+    <ngay_sinh>12</ngay_sinh>
+    <muc_luong>12.0</muc_luong>
+    <dia_chi>12</dia_chi>
+    <id_don_vi>1</id_don_vi>
+  </nhan_vien>
+  <nhan_vien>
+    <id>4</id>
+    <ho_ten>vinh</ho_ten>
+    <gioi_tinh>1</gioi_tinh>
+    <ngay_sinh>1231</ngay_sinh>
+    <muc_luong>3123.0</muc_luong>
+    <dia_chi>123</dia_chi>
+    <id_don_vi>1</id_don_vi>
+  </nhan_vien>
+  <nhan_vien>
+    <id>5</id>
+    <ho_ten>lan</ho_ten>
+    <gioi_tinh>1</gioi_tinh>
+    <ngay_sinh>123</ngay_sinh>
+    <muc_luong>123.0</muc_luong>
+    <dia_chi>123</dia_chi>
+    <id_don_vi>1</id_don_vi>
+  </nhan_vien>
+</don_vi>
