@@ -9,6 +9,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import javax.xml.transform.TransformerException;
+import org.xml.sax.SAXException;
 
 /**
  * @author Tran Ngoc Dan
@@ -16,6 +18,7 @@ import java.util.ArrayList;
  * @since 16/09/2016
  */
 public class DirectoryMain {
+
     /**
      * @param args the command line arguments
      */
@@ -25,7 +28,7 @@ public class DirectoryMain {
             BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
             TelephoneDirectory directory = new TelephoneDirectory();
             directory.loadContact();
-            
+
             while (true) {
                 System.out.println("\n");
                 System.out.println("1. Show all contact");
@@ -93,13 +96,15 @@ public class DirectoryMain {
                         System.out.print("[Name]: ");
                         String updatedName = input.readLine();
                         directory.updateContact(updatedName);
+                        break;
+                    default:
                 }
                 if (ans == 6) {
                     directory.updateFileContact();
                     break;
                 }
             }
-        } catch (Exception ex) {
+        } catch (SAXException | IOException | NumberFormatException | TransformerException ex) {
             System.out.println("Err: " + ex.getMessage());
         }
     }

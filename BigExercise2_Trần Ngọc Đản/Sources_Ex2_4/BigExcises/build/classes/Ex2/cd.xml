@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CDs>
+  <cd>
+    <id>1</id>
+    <name>nga</name>
+    <singer>hoang</singer>
+    <numbersongs>1</numbersongs>
+    <price>1.0</price>
+  </cd>
+  <cd>
+    <id>2</id>
+    <name>ca</name>
+    <singer>tom</singer>
+    <numbersongs>2</numbersongs>
+    <price>10000.0</price>
+  </cd>
+  <cd>
+    <id>3</id>
+    <name> hang </name>
+    <singer> nga </singer>
+    <numbersongs>10</numbersongs>
+    <price>10.0</price>
+  </cd>
+  <cd>
+    <id>7</id>
+    <name>hoang</name>
+    <singer>anh</singer>
+    <numbersongs>1000</numbersongs>
+    <price>1000.0</price>
+  </cd>
+</CDs>

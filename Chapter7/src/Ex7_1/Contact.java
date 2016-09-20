@@ -13,7 +13,9 @@ package Ex7_1;
 public class Contact {
     private String numberPhone;
     private String name;
-    
+    /**
+     * constructor
+     */
     public Contact(String numberPhone, String name) {
         this.numberPhone = numberPhone;
         this.name = name;
