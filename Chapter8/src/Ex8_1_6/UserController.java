@@ -79,7 +79,6 @@ public class UserController {
         if (!password.equals(confirm)) {
             System.out.println("Password isn't the same as the Confirm Password");
         } else {
-
             try (Connection conn = db.connect()) {
                 String sql = "INSERT INTO user VALUES(NULL,'" + user + "','" + password + "')";
                 PreparedStatement statement = conn.prepareStatement(sql);
